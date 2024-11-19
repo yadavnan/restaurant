@@ -5,7 +5,7 @@ export default function loadHome() {
   content.innerHTML = ''; // Clear existing content
 
   const heading = document.createElement('h1');
-  heading.textContent = 'Welcome to Our Restaurant!';
+  heading.textContent = 'Welcome to vinay Restaurant!';
   
   const description = document.createElement('p');
   description.textContent = 'We serve the best food in town. Visit us for an unforgettable experience!';
