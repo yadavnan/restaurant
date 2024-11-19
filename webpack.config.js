@@ -24,7 +24,22 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i, // Match image files
         type: 'asset/resource', // Use Webpack's `asset/resource` for images
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i, // Match font files
+        type: 'asset/resource', // Use Webpack's `asset/resource` for fonts
+      },
     ],
   },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'src/assets/'), // Optional alias for better file management
+    },
+  },
   mode: 'development', // Can be set to 'production' for optimized builds
+  devServer: {
+    static: './dist', // Serve files from the `dist` folder
+    port: 8080, // Local development server port
+    open: true, // Automatically open the browser
+    hot: true, // Enable hot module replacement
+  },
 };
