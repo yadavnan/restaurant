@@ -146,7 +146,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hom
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n  const content = document.getElementById('content');\r\n  content.innerHTML = '';\r\n\r\n  const heading = document.createElement('h1');\r\n  heading.textContent = 'Our Menu';\r\n\r\n  const menuList = document.createElement('ul');\r\n  const items = ['Pizza', 'Pasta', 'Salad'];\r\n  items.forEach(item => {\r\n    const li = document.createElement('li');\r\n    li.textContent = item;\r\n    menuList.appendChild(li);\r\n  });\r\n\r\n  content.append(heading, menuList);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-website/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n/* harmony import */ var _public_pizza_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./public/pizza.jpg */ \"./src/public/pizza.jpg\");\n/* harmony import */ var _public_pastha_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./public/pastha.jpg */ \"./src/public/pastha.jpg\");\n/* harmony import */ var _public_salad_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./public/salad.jpg */ \"./src/public/salad.jpg\");\n  // Import the image file\r\n\r\n\r\n\r\nfunction loadMenu() {\r\n  const content = document.getElementById('content');\r\n  content.innerHTML = '';  // Clear the content before adding the menu\r\n\r\n  const heading = document.createElement('h1');\r\n  heading.textContent = 'Our Menu';\r\n\r\n  const menuList = document.createElement('ul');\r\n  \r\n  // Array of menu items and their image paths\r\n  const items = [\r\n    { name: 'Pizza', imgSrc: _public_pizza_jpg__WEBPACK_IMPORTED_MODULE_0__ },  // Use imported image paths\r\n    { name: 'Pasta', imgSrc: _public_pastha_jpg__WEBPACK_IMPORTED_MODULE_1__ },\r\n    { name: 'Salad', imgSrc: _public_salad_jpg__WEBPACK_IMPORTED_MODULE_2__ }\r\n  ];\r\n\r\n  items.forEach(item => {\r\n    const li = document.createElement('li');\r\n\r\n    // Create an image element for each menu item\r\n    const img = document.createElement('img');\r\n    img.src = item.imgSrc;  // Set the image source\r\n    img.alt = item.name;    // Set the alt text to the item name\r\n    img.width = 100;        // Set image width\r\n\r\n    // Add the image and the item name to the list item\r\n    li.appendChild(img);\r\n    li.appendChild(document.createTextNode(item.name));\r\n\r\n    // Append the list item to the menu list\r\n    menuList.appendChild(li);\r\n  });\r\n\r\n  // Append the heading and menu list to the content\r\n  content.append(heading, menuList);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-website/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/public/pastha.jpg":
+/*!*******************************!*\
+  !*** ./src/public/pastha.jpg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e78f889b7c6a0737424a.jpg\";\n\n//# sourceURL=webpack://restaurant-website/./src/public/pastha.jpg?");
+
+/***/ }),
+
+/***/ "./src/public/pizza.jpg":
+/*!******************************!*\
+  !*** ./src/public/pizza.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6b4905d75b5d85cc2af4.jpg\";\n\n//# sourceURL=webpack://restaurant-website/./src/public/pizza.jpg?");
+
+/***/ }),
+
+/***/ "./src/public/salad.jpg":
+/*!******************************!*\
+  !*** ./src/public/salad.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"eee65f3a135d627b0be5.jpg\";\n\n//# sourceURL=webpack://restaurant-website/./src/public/salad.jpg?");
 
 /***/ }),
 
